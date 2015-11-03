@@ -1,0 +1,14 @@
+PODS:
+  - LBNTools (0.1.0)
+
+DEPENDENCIES:
+  - LBNTools (from `../`)
+
+EXTERNAL SOURCES:
+  LBNTools:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LBNTools: 14dc3ebd3f71fda66b77e53c8e54fae50644a787
+
+COCOAPODS: 0.39.0

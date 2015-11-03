@@ -7,9 +7,16 @@
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Include LBNTools.h in your project.
+
+```ObjC
+#import "LBNTools.h"
+```
+Than you can access all the methods as class methods. No need to instantiete this class.
 
 ## Requirements
+
+This Tools uses Reachability as a means to check for internet accesss availability.
 
 ## Installation
 
@@ -19,6 +26,20 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "LBNTools"
 ```
+
+## Methods
+
+### stringAsPlainTextFromString 
+
+Remove escape text from string and return as plain text. Those escaped text is mostly received via HTML pages string.
+
+### errorWithMessage
+
+A facilitator method that creates a NSError object with a given message.
+
+### isNetworkAvailable
+
+Make use of reachability class to determine if there is any kind of internet connection.
 
 ## Author
 
