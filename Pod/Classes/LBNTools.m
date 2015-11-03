@@ -7,7 +7,7 @@
 
 #import "LBNTools.h"
 
-//#import "Reachability.h"
+#import "Reachability.h"
 
 //#import "GTMNSString+HTML.h"
 
@@ -34,7 +34,6 @@
     return localError;
 }
 
-/*
 + (bool)isNetworkAvailable {
     
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
@@ -49,6 +48,5 @@
         return YES;
     }
 }
-*/
 
 @end

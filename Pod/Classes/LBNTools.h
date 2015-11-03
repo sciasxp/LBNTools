@@ -12,6 +12,6 @@
 
 + (NSString *)stringAsPlainTextFromString:(NSString *)htmlString;
 + (NSError *)errorWithMessage:(NSString *)message;
-//+ (bool)isNetworkAvailable;
++ (bool)isNetworkAvailable;
 
 @end

@@ -1,6 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
+target 'LBNTools', :exclusive => true do
+    pod "LBNTools", :path => "../"
+
+    pod 'Reachability', '~> 3.2'
+
+end
 
 target 'LBNTools_Tests', :exclusive => true do
   pod "LBNTools", :path => "../"

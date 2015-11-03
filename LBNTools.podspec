@@ -37,5 +37,5 @@ In this class I include class methods with facilitators methods that I most use 
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'Reachability', '~> 3'
 end
