@@ -29,17 +29,25 @@ pod "LBNTools"
 
 ## Methods
 
-### stringAsPlainTextFromString 
+### +(NSString *)stringAsPlainTextFromString:
 
 Remove escape text from string and return as plain text. Those escaped text is mostly received via HTML pages string.
 
-### errorWithMessage
+### +(NSError *)errorWithMessage:
 
 A facilitator method that creates a NSError object with a given message.
 
-### isNetworkAvailable
+### +(bool)isNetworkAvailable
 
 Make use of reachability class to determine if there is any kind of internet connection.
+
+### +(void)roundTopCornersRadius:borderColor:forView:
+
+Round top corners for any view, adding border with especified color.
+
+### +(void)roundBottomCornersRadius:borderColor:forView:
+
+Round top corners for any view, adding border with especified color.
 
 ## Author
 

@@ -13,5 +13,6 @@
 + (NSString *)stringAsPlainTextFromString:(NSString *)htmlString;
 + (NSError *)errorWithMessage:(NSString *)message;
 + (bool)isNetworkAvailable;
-
++ (void)roundTopCornersRadius:(CGFloat)radius borderColor:(UIColor *)color forView:(UIView *)view;
++ (void)roundBottomCornersRadius:(CGFloat)radius borderColor:(UIColor *)color forView:(UIView *)view;
 @end

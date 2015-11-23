@@ -49,4 +49,36 @@
     }
 }
 
++(void)roundCorners:(UIRectCorner)corners borderColor:(UIColor *)color radius:(CGFloat)radius forView:(UIView *)view
+{
+    CGRect bounds = view.bounds;
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:bounds
+                                                   byRoundingCorners:corners
+                                                         cornerRadii:CGSizeMake(radius, radius)];
+    
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.frame = bounds;
+    maskLayer.path = maskPath.CGPath;
+    
+    view.layer.mask = maskLayer;
+    
+    CAShapeLayer*   frameLayer = [CAShapeLayer layer];
+    frameLayer.frame = bounds;
+    frameLayer.path = maskPath.CGPath;
+    frameLayer.strokeColor = color.CGColor;
+    frameLayer.fillColor = nil;
+    
+    [view.layer addSublayer:frameLayer];
+}
+
++(void)roundTopCornersRadius:(CGFloat)radius borderColor:(UIColor *)color forView:(UIView *)view
+{
+    [self roundCorners:(UIRectCornerTopLeft|UIRectCornerTopRight) borderColor:color radius:radius forView:view];
+}
+
++(void)roundBottomCornersRadius:(CGFloat)radius borderColor:(UIColor *)color forView:(UIView *)view
+{
+    [self roundCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight) borderColor:color radius:radius forView:view];
+}
+
 @end
