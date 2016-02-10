@@ -41,6 +41,10 @@ A facilitator method that creates a NSError object with a given message.
 
 Make use of reachability class to determine if there is any kind of internet connection.
 
+### +(void)roundCorners:borderColor:radius:forView:
+
+Round corners for any view, adding border with especified color. You can define which corner will be rounded using those properties on roundCorners: (UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerBottomRight)
+
 ### +(void)roundTopCornersRadius:borderColor:forView:
 
 Round top corners for any view, adding border with especified color.
@@ -48,6 +52,12 @@ Round top corners for any view, adding border with especified color.
 ### +(void)roundBottomCornersRadius:borderColor:forView:
 
 Round top corners for any view, adding border with especified color.
+
+### + (bool)canUpdateForTime:andStorePlace:
+
+It records in the storePlace the time this funcion was last called and check if the given time has been passed sinse the last time it was called.
+
+Time is give in hours and storePlace is any string that will be used as key to store the value, this away you can have as much time checks as you have storePlaces.
 
 ## Author
 

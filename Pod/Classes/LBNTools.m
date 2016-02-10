@@ -81,4 +81,25 @@
     [self roundCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight) borderColor:color radius:radius forView:view];
 }
 
++ (bool)canUpdateForTime:(CGFloat)hour andStorePlace:(NSString *)storePlace
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSTimeInterval lastUpdateTimeInterval = [defaults floatForKey:storePlace];
+    
+    NSDate *lastDate = [NSDate dateWithTimeIntervalSinceReferenceDate:lastUpdateTimeInterval];
+    
+    NSTimeInterval difference = [[NSDate date] timeIntervalSinceDate:lastDate];
+    
+    float hours = ((difference / 60) /60);
+    
+    if (hours >= hour) {
+        
+        return YES;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+
 @end
