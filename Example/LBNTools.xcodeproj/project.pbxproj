@@ -12,11 +12,9 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		796C77DB22386DEFD3BFCE16 /* Pods_LBNTools_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63B684C1C9694ADBEECEBD0 /* Pods_LBNTools_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C66F7F7024514DD4453C623 /* Pods-LBNTools_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBNTools_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBNTools_Tests/Pods-LBNTools_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		148976D19D1FC73AF3A19296 /* LBNTools.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LBNTools.podspec; path = ../LBNTools.podspec; sourceTree = "<group>"; };
 		225DC7A88336DACA07DBD473 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -29,8 +27,6 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		9EFCEAB784AA77C6A7B956F0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B1E2B75DF981C563F06F6B86 /* Pods-LBNTools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBNTools_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBNTools_Tests/Pods-LBNTools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F63B684C1C9694ADBEECEBD0 /* Pods_LBNTools_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBNTools_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +37,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				796C77DB22386DEFD3BFCE16 /* Pods_LBNTools_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +50,6 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				F23E2EDA087FC275A362363A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,7 +68,6 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				F63B684C1C9694ADBEECEBD0 /* Pods_LBNTools_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,15 +101,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		F23E2EDA087FC275A362363A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B1E2B75DF981C563F06F6B86 /* Pods-LBNTools_Tests.debug.xcconfig */,
-				0C66F7F7024514DD4453C623 /* Pods-LBNTools_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,12 +108,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "LBNTools_Tests" */;
 			buildPhases = (
-				65A4F003F721909634ADD279 /* Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				D0C2EACFC8D9A4220BD02E59 /* Embed Pods Frameworks */,
-				08A4446535D8782D523018E4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,54 +164,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		08A4446535D8782D523018E4 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LBNTools_Tests/Pods-LBNTools_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		65A4F003F721909634ADD279 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D0C2EACFC8D9A4220BD02E59 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LBNTools_Tests/Pods-LBNTools_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6003F5AA195388D20070C39A /* Sources */ = {
@@ -329,7 +262,6 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1E2B75DF981C563F06F6B86 /* Pods-LBNTools_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -351,7 +283,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C66F7F7024514DD4453C623 /* Pods-LBNTools_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

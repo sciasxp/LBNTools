@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LBNTools"
-  s.version          = "0.0.5"
+  s.version          = "0.0.6"
   s.summary          = "Some methods tools I use in most of my projects. A colection of facilitators methods."
 
 # This description is used to generate tags and improve search results.

@@ -1,6 +1,0 @@
-framework module LBNTools {
-  umbrella header "LBNTools-umbrella.h"
-
-  export *
-  module * { export * }
-}
