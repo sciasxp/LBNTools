@@ -2,8 +2,8 @@
 //  LBNToolsTests.m
 //  LBNToolsTests
 //
-//  Created by Luciano Bastos Nunes on 11/03/2015.
-//  Copyright (c) 2015 Luciano Bastos Nunes. All rights reserved.
+//  Created by Luciano Bastos Nunes on 02/29/2016.
+//  Copyright (c) 2016 Luciano Bastos Nunes. All rights reserved.
 //
 
 @import XCTest;

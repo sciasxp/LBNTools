@@ -1,17 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
 
-platform :ios, '7.0'
-inhibit_all_warnings!
 
-target 'LBNTools' do
-    xcodeproj 'LBNTools'
-    pod 'Reachability', '~> 3.2'
+target 'LBNTools_Tests', :exclusive => true do
+  pod 'LBNTools', :path => '../'
+  pod 'Reachability', '~> 3.2'
 
+  
 end
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        puts "#{target.name}"
-    end
-end
-
