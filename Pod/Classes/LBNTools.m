@@ -13,14 +13,14 @@
 
 @implementation LBNTools
 
-+ (NSString *)stringAsPlainTextFromString:(NSString *)htmlString {
+(NSString *)stringAsPlainTextFromString:(NSString *)htmlString {
     
     //NSData *data = [htmlString dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     //return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUTF8StringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]} documentAttributes:nil error:nil];
-     return attributedString.string;
+    return attributedString.string;
     
     //return [htmlString gtm_stringByUnescapingFromHTML];
 }
@@ -85,6 +85,9 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSTimeInterval lastUpdateTimeInterval = [defaults floatForKey:storePlace];
+    
+    [defaults setFloat:[[NSDate date] timeIntervalSinceReferenceDate] forKey:storePlace];
+    [defaults synchronize];
     
     NSDate *lastDate = [NSDate dateWithTimeIntervalSinceReferenceDate:lastUpdateTimeInterval];
     
