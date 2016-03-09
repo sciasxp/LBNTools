@@ -55,9 +55,21 @@ Round top corners for any view, adding border with especified color.
 
 ### + (bool)canUpdateForTime:andStorePlace:
 
-It records in the storePlace the time this funcion was last called and check if the given time has been passed sinse the last time it was called.
+It records in the storePlace the time this method was last called and check if the given time has been passed sinse the last time it was called.
 
-Time is give in hours and storePlace is any string that will be used as key to store the value, this away you can have as much time checks as you have storePlaces.
+Time is given in hours and a storePlace is any string that will be used as key to store the value, this away you can have as much time checks as you have storePlaces.
+
+### + (bool)canUpdateTime:andStorePlace:
+
+Only checks if the given time has been passed sinse the last time it was called for the store place.
+
+It works in pair with updateTimeForStorePlace.
+
+### + (void)updateTimeForStorePlace:
+
+Only records in the storePlace the time this method was last called.
+
+It works in pair with canUpdateTime.
 
 ## Author
 

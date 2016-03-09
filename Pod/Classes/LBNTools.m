@@ -105,4 +105,32 @@
     }
 }
 
++ (bool)canUpdateTime:(CGFloat)hour andStorePlace:(NSString *)storePlace
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSTimeInterval lastUpdateTimeInterval = [defaults floatForKey:storePlace];
+    
+    NSDate *lastDate = [NSDate dateWithTimeIntervalSinceReferenceDate:lastUpdateTimeInterval];
+    
+    NSTimeInterval difference = [[NSDate date] timeIntervalSinceDate:lastDate];
+    
+    float hours = ((difference / 60) /60);
+    
+    if (hours >= hour) {
+        
+        return YES;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+
++ (void)updateTimeForStorePlace:(NSString *)storePlace {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setFloat:[[NSDate date] timeIntervalSinceReferenceDate] forKey:storePlace];
+    [defaults synchronize];
+}
+
 @end

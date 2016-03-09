@@ -17,4 +17,6 @@
 + (void)roundTopCornersRadius:(CGFloat)radius borderColor:(UIColor *)color forView:(UIView *)view;
 + (void)roundBottomCornersRadius:(CGFloat)radius borderColor:(UIColor *)color forView:(UIView *)view;
 + (bool)canUpdateForTime:(CGFloat)hour andStorePlace:(NSString *)storePlace;
++ (bool)canUpdateTime:(CGFloat)hour andStorePlace:(NSString *)storePlace;
++ (void)updateTimeForStorePlace:(NSString *)storePlace;
 @end
