@@ -20,7 +20,7 @@
     
     
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUTF8StringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]} documentAttributes:nil error:nil];
-     return attributedString.string;
+    return attributedString.string;
     
     //return [htmlString gtm_stringByUnescapingFromHTML];
 }
@@ -131,6 +131,16 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setFloat:[[NSDate date] timeIntervalSinceReferenceDate] forKey:storePlace];
     [defaults synchronize];
+}
+
++ (NSMutableDictionary *)changeKey:(NSString *)key1 toKey:(NSString *)key2 onDictionary:(NSDictionary *)dic {
+    
+    NSMutableDictionary *mutableDic = [[NSMutableDictionary alloc] initWithDictionary:dic];
+    id aux = mutableDic[key1];
+    [mutableDic removeObjectForKey:key1];
+    [mutableDic setObject:aux forKey:key2];
+    
+    return mutableDic;
 }
 
 @end

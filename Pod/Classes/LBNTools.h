@@ -19,4 +19,6 @@
 + (bool)canUpdateForTime:(CGFloat)hour andStorePlace:(NSString *)storePlace;
 + (bool)canUpdateTime:(CGFloat)hour andStorePlace:(NSString *)storePlace;
 + (void)updateTimeForStorePlace:(NSString *)storePlace;
++ (NSMutableDictionary *)changeKey:(NSString *)key1 toKey:(NSString *)key2 onDictionary:(NSDictionary *)dic;
+
 @end

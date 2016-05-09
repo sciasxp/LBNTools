@@ -71,6 +71,10 @@ Only records in the storePlace the time this method was last called.
 
 It works in pair with canUpdateTime.
 
+### + (NSMutableDictionary *)changeKey:(NSString *)key1 toKey:(NSString *)key2 onDictionary:(NSDictionary *)dic
+
+Chenge key1 name for key2 name in a givien NSDictionary and returns a NSMutableDictionary with the changes.
+
 ## Author
 
 Luciano Bastos Nunes, sciasxp@gmail.com
